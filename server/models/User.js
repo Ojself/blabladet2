@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const userSchema = new Schema(
   {
     username: String,
-    password: String,
+    score: Number,
+    difficulty: String,
   },
   {
     timestamps: {
