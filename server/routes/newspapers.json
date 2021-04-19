@@ -1,0 +1,59 @@
+{
+  
+  "abcnyheter": {
+    "name": "abcnyheter",
+    "uri": "https://www.abcnyheter.no/",
+    "query": "article"
+  },
+  "adressa": {
+    "name": "adressa",
+    "uri": "https://www.adressa.no/",
+    "query": ".article"
+  },
+  "aftenposten": {
+    "name": "aftenposten",
+    "uri": "https://www.aftenposten.no/",
+    "query": "article"
+  },
+  "bt": {
+    "name": "bt",
+    "uri": "https://www.bt.no/",
+    "query": "article"
+  },
+  "dn": {
+    "name": "dn",
+    "uri": "https://www.dn.no/",
+    "query": "article",
+    "cookieWarning": "#closeCookie"
+  },
+  "e24": {
+    "name": "e24",
+    "uri": "https://e24.no/",
+    "query": ".article-extract"
+  },
+  "finansavisen": {
+    "name": "finansavisen",
+    "uri": "https://finansavisen.no/",
+    "query": "article"
+  },
+  "nettavisen": {
+    "name": "nettavisen",
+    "uri": "https://www.nettavisen.no/",
+    "query": "article"
+  },
+  "nrk": {
+    "name": "nrk",
+    "uri": "https://www.nrk.no/",
+    "query": ".kur-room"
+  },
+  "dagbladet": {
+    "name": "dagbladet",
+    "uri": "https://www.dagbladet.no",
+    "query": "article"
+  },
+  "vg": {
+    "name": "vg",
+    "uri": "https://www.vg.no/",
+    "query": "article"
+  }
+}
