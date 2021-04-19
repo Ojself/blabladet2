@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import MainNavbar from './MainNavbar'
 import Home from './pages/Home'
 
-export const App = () => {
+export default function App() {
   return (
     <div className="App">
       <MainNavbar />
