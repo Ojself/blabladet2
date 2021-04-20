@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import MainNavbar from './MainNavbar'
-import Home from './pages/Home'
+import Spill from './pages/Spill'
 import Extension from './pages/Extension'
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <MainNavbar />
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Spill} />
         <Route path="/extension" exact component={Extension} />
         <Route render={() => <h2>404</h2>} />
       </Switch>

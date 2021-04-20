@@ -20,6 +20,7 @@ const getNewsPaperAlternatives = (newspaper) => {
 
 
 router.get('/article', async (req, res) => {
+  console.log("Get /article")
   const randomNewspaper = getRandomNewsPaper(newspapers)
   let articleScreenShot
   let retries = 0

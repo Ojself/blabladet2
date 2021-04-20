@@ -15,8 +15,8 @@ const getArticle = async (newspaper) => {
 
   const screenshot = Array.from(articles)[
     Math.floor(Math.random() * articles.length)
-  ].screenshot()
-
+  ].screenshot({ encoding: "base64" })
+  
   return screenshot
 }
 

@@ -9,7 +9,7 @@
   "adressa": {
     "name": "adressa",
     "uri": "https://www.adressa.no/",
-    "query": ".article",
+    "query": "div[data-articleid]",
     "cookieWarning": "#pmpb-link-button"
   },
   "aftenposten": {
