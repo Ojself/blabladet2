@@ -18,7 +18,6 @@ const app = express()
 
 app.use(nocache())
 
-// Set "Access-Control-Allow-Origin" header
 app.use(
   cors({
     origin: (origin, cb) => {

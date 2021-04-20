@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import api from '../api'
+
 import logo from '../logo.svg'
 import { NavLink } from 'react-router-dom'
 import { withRouter } from 'react-router'
@@ -12,7 +12,7 @@ function MainNavbar(props) {
       <NavLink to="/" exact>
         Home
       </NavLink>
-      <NavLink to="/blabladet">extension</NavLink>
+      <NavLink to="/extension">Extension</NavLink>
     </nav>
   )
 }

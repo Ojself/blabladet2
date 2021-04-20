@@ -1,5 +1,5 @@
 const express = require('express')
-const { set } = require('../app')
+const getArticle = require("./newspaperScraper")
 const router = express.Router()
 const newspapers = require("./newspapers.json")
 
@@ -9,7 +9,6 @@ const getRandomNewsPaper = (newspapers) => {
 }
 
 const getNewsPaperAlternatives = (newspaper) => {
-  console.log(newspaper)
   const alternatives = new Set
   alternatives.add(newspaper.name)
   while (alternatives.size < 3){
@@ -20,12 +19,26 @@ const getNewsPaperAlternatives = (newspaper) => {
 }
 
 
-router.get('/newspaper', async (req, res) => {
-  
+router.get('/article', async (req, res) => {
   const randomNewspaper = getRandomNewsPaper(newspapers)
+  let articleScreenShot
+  let retries = 0
+  do {
+    try {
+      retries += 1
+      articleScreenShot = await getArticle( randomNewspaper )
+    } catch (err){
+      console.log("Error: ", err)
+    }
+  } while (retries < 3 && !articleScreenShot)
+  
   const alternatives = getNewsPaperAlternatives(randomNewspaper)
   
-  // res.sendFile()
+  res.json({
+    alternatives,
+    correctAnswer: randomNewspaper.name,
+    articleScreenShot,
+  })
 })
 
 

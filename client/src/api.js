@@ -20,17 +20,9 @@ const errHandler = err => {
 
 export default {
   service: service,
-// rename this
-  getCountries() {
+  getArticle() {
     return service
-      .get('/')
-      .then(res => res.data)
-      .catch(errHandler)
-  },
-
-  addCountry(body) {
-    return service
-      .post('/', body)
+      .get('/article')
       .then(res => res.data)
       .catch(errHandler)
   },

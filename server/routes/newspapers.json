@@ -3,22 +3,26 @@
   "abcnyheter": {
     "name": "abcnyheter",
     "uri": "https://www.abcnyheter.no/",
-    "query": "article"
+    "query": "article",
+    "cookieWarning": "startsiden-gdpr-disclaimer-confirm"
   },
   "adressa": {
     "name": "adressa",
     "uri": "https://www.adressa.no/",
-    "query": ".article"
+    "query": ".article",
+    "cookieWarning": "#pmpb-link-button"
   },
   "aftenposten": {
     "name": "aftenposten",
     "uri": "https://www.aftenposten.no/",
-    "query": "article"
+    "query": "article",
+    "cookieWarning": ".sch-datacontroller__btn-close"
   },
   "bt": {
     "name": "bt",
     "uri": "https://www.bt.no/",
-    "query": "article"
+    "query": "article",
+    "cookieWarning": ".sch-datacontroller__btn-close"
   },
   "dn": {
     "name": "dn",
@@ -34,7 +38,8 @@
   "finansavisen": {
     "name": "finansavisen",
     "uri": "https://finansavisen.no/",
-    "query": "article"
+    "query": "article",
+    "cookieWarning": "finansavisen-gdpr-disclaimer-confirm"
   },
   "nettavisen": {
     "name": "nettavisen",
@@ -49,7 +54,8 @@
   "dagbladet": {
     "name": "dagbladet",
     "uri": "https://www.dagbladet.no",
-    "query": "article"
+    "query": "article",
+    "cookieWarning": "css-pp-ok"
   },
   "vg": {
     "name": "vg",

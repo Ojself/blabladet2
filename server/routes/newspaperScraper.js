@@ -6,21 +6,18 @@ const getArticle = async (newspaper) => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(uri)
+
   if (cookieWarning) {
-    let inputElement = await page.$(cookieWarning)
-    await inputElement.click()
+    let inputElement = await page.$(cookieWarning);
+    if (inputElement) await inputElement.click();
   }
   let articles = await page.$$(query)
 
   const screenshot = Array.from(articles)[
     Math.floor(Math.random() * articles.length)
-  ].screenshot({ path: `./jarle${Math.floor(Math.random() * 10000)}.png` })
+  ].screenshot()
 
   return screenshot
 }
-const allNewsPapers = Object.keys(newspapers)
-const randomNewsPaper =
-  newspapers[allNewsPapers[Math.floor(Math.random() * allNewsPapers.length)]]
-console.log(randomNewsPaper, 'randomNewsPaper')
 
-getArticle(randomNewsPaper)
+module.exports = getArticle
