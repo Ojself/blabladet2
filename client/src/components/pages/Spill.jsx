@@ -3,7 +3,7 @@ import api from '../../api'
 import Alternative from '../molecules/Alternative'
 
 import GameOver from "./../molecules/GameOver"
-import Spinner from "./../molecules/spinner/Spinner"
+import Spinner from "../molecules/spinner/spinner"
 
 export default function Spill() {
   const [score, setScore] = useState(0)
