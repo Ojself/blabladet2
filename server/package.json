@@ -15,7 +15,7 @@
     "express-session": "^1.15.6",
     "morgan": "^1.9.1",
     "nocache": "^2.0.0",
-    "puppeteer": "^8.0.0",
+    "puppeteer": "^9.0.0",
     "puppeteer-core": "^9.0.0",
     "serve-favicon": "^2.5.0"
   },
