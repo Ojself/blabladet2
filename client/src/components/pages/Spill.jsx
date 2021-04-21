@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react'
 import api from '../../api'
 import Alternative from '../molecules/Alternative'
 
-import Spinner from "../molecules/spinner/Spinner"
-import GameOver from "../molecules/GameOver"
+import GameOver from "./../molecules/GameOver"
+import Spinner from "./../molecules/spinner/Spinner"
 
 export default function Spill() {
   const [score, setScore] = useState(0)
-  const [lives, setLives] = useState(1)
+  const [lives, setLives] = useState(3)
   const [currentArticle, setCurrentArticle] = useState('')
   const [correctAnswer, setCorrectAnswer] = useState('')
   const [alternatives, setAlternatives] = useState([])

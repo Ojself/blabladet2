@@ -8,15 +8,10 @@ const personalities = {
   high: <p><em>Utmerket!</em> Du har en bred kunnskapshorisont i norsk media! </p>,
 }
 
-const blabladetUrl = "https://chrome.google.com/webstore/detail/blabladet/gffhghfcjpmgohnafihgfkifbamnpibe?hl=no"
+
 
 
 const GameOver = ({score}) => {
-  console.log(score, 'score')
-  
-  /* const extensionInfo = (
-    <p>Sjekk ut <a href={blabladetUrl}>Blabladet</a>  extension</p>
-  ) */
   let feedback
   switch (true) {
     case score > 10:
