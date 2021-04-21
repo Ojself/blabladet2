@@ -16,10 +16,10 @@ export default function Spill() {
   const [loading, setLoading] = useState(true)
   const [gameOver, setGameOver] = useState(false)
 
-  const getNewArticle = async (setSpinner = true) => {
-    if (setSpinner){
+  const getNewArticle = async () => {
+    
       setLoading(true)
-    }
+    
     let data = await api.getArticle()
     setCurrentArticle(data.articleScreenShot)
     setCorrectAnswer(data.correctAnswer)
@@ -44,12 +44,12 @@ export default function Spill() {
       if (newLife <= 0){
         setTimeout(()=>{
           setGameOver(true)
-        }, 1000)
+        }, 2000)
         return
       }
     }
 
-    getNewArticle(false)
+    getNewArticle()
   }
   if (gameOver) {
     return <GameOver score={score}/>
@@ -66,17 +66,18 @@ export default function Spill() {
 
       <img src={`data:image/jpeg;base64,${currentArticle}`} />
       </div>
-      <div>
-        <p>{Array.from({length:lives}, (life,i)=> <span key={`${life}${i}`}>♥️</span>)}</p>
-      {!!score &&  <p>Score: <b> {score} </b></p> }
+      <div style={{height: "5vh"}}>
+        <p style={{height: "2vh"}}>{Array.from({length:lives}, (life,i)=> <span style={{fontSize: "2rem"}} key={`${life}${i}`}>♥️</span>)}</p>
+      <p>Score: <b> {score} </b></p> 
       </div>
+      <br />
       <h3>Hvilke nettavis har denne artikkelen?</h3>
-      <div className="alternatives-wrapper">
-        {alternatives.map((alternative, i)=><Alternative animate={animate} correctAnswer={correctAnswer} blinkGreen={blinkGreen && correctAnswer === alternative}  key={alternative} cb={handleAlternativeClick } imgName={alternative} index={i}/>)}
-      </div>
       </>
       }
       
+      {alternatives.length ? <div className="alternatives-wrapper">
+        {alternatives.map((alternative, i)=><Alternative animate={animate} correctAnswer={correctAnswer} blinkGreen={blinkGreen && correctAnswer === alternative}  key={alternative} cb={handleAlternativeClick } imgName={alternative} index={i}/>)}
+      </div> : null}
 
       
     </div>

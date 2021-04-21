@@ -26,9 +26,9 @@ router.get('/article', async (req, res) => {
   let retries = 0
   do {
     try {
-      retries += 1
       articleScreenShot = await getArticle( randomNewspaper )
     } catch (err){
+      retries += 1
       console.log("Error: ", err)
     }
   } while (retries < 3 && !articleScreenShot)
