@@ -1,6 +1,6 @@
 # Blabladet
 
-Blabladet er en en web-applikasjon som scraper [norges største nettaviser ](https://www.medienorge.uib.no/statistikk/medium/ikt/395) i real-time og lar brukeren gjette hvilke nettavisen som _eier_ artikkelen.
+Blabladet er en en web-applikasjon som scraper [norges største nettaviser ](https://www.medienorge.uib.no/statistikk/medium/ikt/395) i real-time og lar brukeren gjette hvilke nettavis som _eier_ artikkelen.
 
 <img alt="Blabladet" src="showcase_blabladet.gif" width="600" height="400" />
 
