@@ -16,9 +16,13 @@
     "morgan": "^1.9.1",
     "nocache": "^2.0.0",
     "puppeteer": "^8.0.0",
+    "puppeteer-core": "^9.0.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "14.16.1"
   }
 }
